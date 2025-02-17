@@ -1,0 +1,20 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <label  for="name">Name:</label>
+    <input  type="text" (change)="changes()" formControlName="name">
+    <br>
+    <label  for="password">Password: </label>
+    <input style="margin-top: 10px;" type="password" (change)="changes()" formControlName="password">
+
+    <br><button style="margin-top: 10px;" type="button" (click)="saveForm()">Save</button>
+
+    <ng-container *ngIf="formInvalid">
+        <p>Form is not valid</p>
+    </ng-container>
+
+    <ng-container *ngIf="redirectTriggered">
+        <h1>Form is not saved! You want to continue?</h1>
+        <br><button type="button" (click)="stay()">Stay</button><button type="button" (click)="leaveForce()">Leave</button>
+    </ng-container>
+
+    <br><br><button style="margin-top: 10px;" type="submit">Submit</button>
+</form>
