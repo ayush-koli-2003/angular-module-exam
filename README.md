@@ -1,10 +1,10 @@
 # AngularModuleExam
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+## Problem Statement: Route Guards with CanDeactivate
 
-## Development server
-
-To start a local development server, run:
+1. Create a canDeactivate guard for a EditProfileComponent
+2. Prompts user to save changes before navigating away.
+3. Cancels navigation if user chooses to stay on the page.
 
 ```bash
 ng serve
